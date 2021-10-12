@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Root element styles should be inherited to page context</title>
+    <style>
+      :root {
+        color: maroon;
+        font-family: "Georgia", serif;
+        font-variant: small-caps;
+        font-style: italic;
+        font-size: 200%;
+      }
+      @page {
+        @top-center {
+          content: "Here is the Page Header";
+        }
+        @bottom-center {
+          content: counter(page);
+        }
+      }
+    </style>
+  </head>
+  <body>
+<p>The root element styles should be inherited to page context, so the page header and footer should have same font and color as the body text in this test.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus a nisi egestas, ultricies lectus quis, mattis metus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc dapibus commodo pulvinar. Cras vitae leo eu urna scelerisque mollis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec mattis dignissim orci, eu interdum arcu luctus a. Etiam dictum faucibus hendrerit.</p>
+<p>
+Nam fringilla lectus iaculis viverra efficitur. Sed eleifend mollis nibh eget scelerisque. Pellentesque et condimentum mi. In a mi non velit eleifend tempus in eget tortor. Duis a mi feugiat, pulvinar sapien varius, tincidunt lectus. Pellentesque lobortis, dui ut varius viverra, tortor enim tincidunt tortor, a finibus eros massa bibendum leo. Mauris ac dui molestie, ornare metus eu, lacinia tellus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec a consequat justo, sed posuere metus.
+</p>
+</body>
+</html>
